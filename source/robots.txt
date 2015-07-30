@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://code4web.com.br/sitemap.xml
