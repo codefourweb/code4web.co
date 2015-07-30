@@ -1,0 +1,17 @@
+@mixin bootstrap-media($type) {
+
+  @if $type == xs {
+    @media (max-width: $screen-xs-max) { @content; }
+  } @else if $type == sm-only {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+  } @else if $type == sm-up {
+    @media (min-width: $screen-sm-min) { @content; }
+  } @else if $type == md-only {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { @content; }
+  } @else if $type == md-up {
+    @media (min-width: $screen-md-min) { @content; }
+  } @else if $type == lg {
+    @media (min-width: $screen-lg-min) { @content; }
+  }
+
+}

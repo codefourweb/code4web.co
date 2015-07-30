@@ -1,0 +1,27 @@
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  padding: 30px;
+  width: 100%;
+
+  @include bootstrap-media(sm-up) {
+    position: fixed;
+    bottom: 0;
+  }
+
+  ul.nav{
+    @include clearfix;
+    width: 215px;
+    margin: 0px auto;
+    li {
+      float: left;
+      a {
+        background: none !important;
+      }
+      i.fa{
+        font-size: 3em;
+      }
+    }
+  } // ul.nav
+
+}

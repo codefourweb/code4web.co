@@ -1,0 +1,90 @@
+.masthead {
+  .navbar-header {
+    a{
+      @include bootstrap-media(sm-up) {
+        margin-right: auto;
+      }
+      display: block;
+      margin-right: 100px;
+      img{
+        margin: 10px 0px;
+      }
+    }
+    .navbar-toggle {
+      margin-top: 30px;
+      @media (min-width: 450px) {
+        margin-top: 50px;
+      }
+      &:hover {
+        border-color: #fff;
+        .icon-bar{
+          background-color: #fff;
+        }
+      }
+    }
+  } // .navbar-header
+
+  .navbar-nav{
+    @include bootstrap-media(sm-up) {
+      margin-top: 50px;
+    }
+    &> li {
+      margin-right: 14px;
+      &> a {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        @include bootstrap-media(sm-up) {
+          border-bottom: 2px solid transparent;
+        }
+        &, &:hover, &:focus{
+          color: #fff;
+          color: rgba(255,255,255,.75);
+        }
+        &:hover,
+        &:focus {
+          border-bottom-color: #a9a9a9;
+          border-bottom-color: rgba(255,255,255,.25);
+        }
+      }
+      &.active > a{
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+      &.dropdown.open > a{
+        border-bottom-color: transparent !important;
+      }
+      &.dropdown ul.dropdown-menu {
+        border-top-right-radius: $border-radius-base;
+        border-top-left-radius: $border-radius-base;
+        &> li a{
+          padding-top: 7px;
+          padding-bottom: 7px;
+          &:hover,
+          &:focus{
+            background-color: $btn-primary-bg;
+            color: #fff;
+          }
+        }
+      }
+      @include bootstrap-media(sm-up) {
+        &.dropdown {
+          ul.dropdown-menu{
+            &:before {
+              content: "";
+              border-bottom: 10px solid #fff;
+              border-right: 10px solid transparent;
+              border-left: 10px solid transparent;
+              position: absolute;
+              top: -10px;
+              right: 40px;
+              z-index: 10;
+            }
+          }
+        } // li.dropdown
+      }
+    }
+  } // .navbar-nav
+
+}
