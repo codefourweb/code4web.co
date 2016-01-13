@@ -1,4 +1,4 @@
-activate :i18n, path: "/:locale/"
+activate :i18n, path: "/:locale/", mount_at_root: :"pt-br"
 
 set :css_dir, 'stylesheets'
 
@@ -15,6 +15,11 @@ configure :build do
   activate :asset_hash
   # Use relative URLs
   # activate :relative_assets
+
+  # activate :asset_host
+  # set :asset_host do
+  #   '//d2iv8xl4t4vnka.cloudfront.net/'
+  # end
 end
 
 activate :deploy do |deploy|
